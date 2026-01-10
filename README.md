@@ -121,25 +121,3 @@ Desktop	4x4 masonry	Full animations
 
     Open a Pull Request
 
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-📞 Contact
-
-iniakuraditt@gmail.com
-
-https://github.com/Raditt10/React-p0rt0.git
-
-🙏 Acknowledgments
-
-    GSAP team for amazing animation library
-
-    Tailwind CSS for utility-first approach
-
-    React community for continuous inspiration
-
-<div align="center">
-⭐ Don't forget to star this repo if you found it helpful!
-
-Xealuyaa . 2025
-
