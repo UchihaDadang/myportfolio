@@ -339,13 +339,7 @@ const Hero = () => {
 
           {/* ================= RIGHT CONTENT (IMAGE) ================= */}
           <div className="relative flex justify-center items-center lg:justify-end w-full h-[420px] lg:h-[520px]">
-            {/* Spline Animation */}
-              <spline-viewer
-                url="https://prod.spline.design/cKZJjUzZ5AXkI3Yq/scene.splinecode"
-                class="w-full h-[320] lg:h-[420] animate-spline-enter bg-none"
-              ></spline-viewer>
-            {/* Optional Glow Overlay */}
-            <div className="pointer-events-none absolute inset-0 rounded-xlbg-gradient-to-tr from-cyan-500/10 via-transparent to-purple-500/10" />
+              {/* right content */}
           </div>
         </div>
       </div>
@@ -529,21 +523,6 @@ const Hero = () => {
 
         .char:hover::before {
           opacity: 0.3;
-        }
-
-        @keyframes spline-enter {
-          from {
-            opacity: 0;
-            transform: translateY(40px) scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
-
-        .animate-spline-enter {
-          animation: spline-enter 1.2s ease-out forwards;
         }
 
       `}</style>
