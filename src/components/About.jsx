@@ -236,7 +236,7 @@ const About = () => {
                 <div className={`mx-auto w-16 h-1 ${isLight ? 'bg-amber-600' : 'bg-yellow-400'} rounded-full`}></div>
               </div>
               {/* Description */}
-              <div className={`space-y-4 text-base ${isLight ? 'text-slate-700' : 'text-slate-300'} leading-relaxed`}>
+              <div className={`space-y-4 text-base text-center ${isLight ? 'text-slate-700' : 'text-slate-300'} leading-relaxed`}>
                 <p>
                   Hao! Saya Rafaditya Syahputra, seorang Front End Developer dengan passion dalam 
                   menciptakan solusi digital yang inovatif dan efisien. Dengan pengalaman lebih dari
@@ -251,7 +251,7 @@ const About = () => {
                 </p>
               </div>
               {/* Call to Action */}
-              <div className="pt-4 flex justify-start">
+              <div className="pt-4 flex justify-center">
                 <a
                   href="/file/Rafaditya Syahputra_CV.pdf"
                   download

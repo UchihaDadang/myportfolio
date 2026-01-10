@@ -156,7 +156,7 @@
           id='achievements'
           ref={sectionRef}
           style={{ fontFamily: "Sora Variable" }}
-          className="relative py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-28 overflow-hidden"
+          className="relative py-20 px-8 sm:px-8 md:px-8 lg:px-12 xl:px-28 overflow-hidden"
         >
           <div className="max-w-7xl mx-auto relative z-20">
             {/* Main Title */}

@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import animasiData from '../components/assets/Programming Computer.json';
 
 gsap.registerPlugin(SplitText);
 
@@ -224,7 +226,7 @@ const Hero = () => {
         fontFamily: "Sora Variable",
         color: themeStyles[theme].accent
       }}
-      className={`font-sora flex flex-col items-center justify-center relative min-h-screen overflow-hidden pt-20 theme-${theme}`}
+      className={`font-sora flex flex-col items-center justify-center relative min-h-screen overflow-hidden md:pt-20 theme-${theme}`}
     >
       {/* Elegant Background - keep halo, drop vignette to avoid section edge darkening */}
       <div className="absolute inset-0 z-0">
@@ -234,14 +236,14 @@ const Hero = () => {
       {/* Main Content Container - Adjusted spacing */}
       <div
         ref={containerRef}
-        className="relative z-20 w-full max-w-7xl mx-auto px-6 mt-10"
+        className="relative z-20 w-full max-w-7xl mx-auto px-8"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
           
           {/* ================= LEFT CONTENT ================= */}
-          <div className="text-left">
+          <div className="text-center lg:text-left">
             <h1
-              className="text-2xl sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[60px] font-bold leading-tight mb-6 tracking-tight"
+              className="text-5xl sm:text-5xl md:text-6xl lg:text-[50px] xl:text-[60px] font-bold leading-tight mb-6 tracking-tight"
               id="nama"
               style={{
                 color: themeStyles[theme].accent,
@@ -294,7 +296,7 @@ const Hero = () => {
                     backgroundClip: "text",
                   }}
                 >
-                  Back-End Web Dev Enthusiast
+                  Back-End Web Enthusiast
                 </span>
               </p>
             </div>
@@ -338,8 +340,13 @@ const Hero = () => {
           </div>
 
           {/* ================= RIGHT CONTENT (IMAGE) ================= */}
-          <div className="relative flex justify-center items-center lg:justify-end w-full h-[420px] lg:h-[520px]">
-              {/* right content */}
+          <div className="hidden md:block justify-center items-center lg:justify-end w-full h-[420px] lg:h-[520px]">
+              <DotLottieReact
+                data={animasiData}
+                loop
+                autoplay
+                className="w-[600px] h-[600px]"
+              />
           </div>
         </div>
       </div>
