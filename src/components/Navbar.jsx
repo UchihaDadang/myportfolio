@@ -151,9 +151,7 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
                     px-6 py-2 text-sm font-medium
                     transition-all duration-300
                     ${
-                      isActive
-                        ? "text-white"
-                        : "text-white/70 hover:text-white"
+                      theme === "dark" ? `${isActive ? "text-white" : "text-white/70 hover:text-white"}` : `${isScrolled ? (isActive ? 'text-white' : 'text-white/70 hover:text-white') : (isActive ? 'text-black' : 'hover:text-black/70')}`
                     }
                   `}
                 >
@@ -182,13 +180,13 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
         {/* THEME TOGGLE */}
         <button
           onClick={toggleThemeMode}
-          className="
+          className={`
+            relative z-[60]
             w-10 h-10 rounded-full
             flex items-center justify-center
-            border border-white/20
-            bg-white/10 hover:bg-white/20
             transition-all duration-300
-          "
+            ${theme === "dark" ? "border border-white/20 bg-white/10 hover:bg-white/20" : "border border-black/20 bg-black/10 hover:bg-black/20"}
+          `}
           aria-label="Toggle theme"
         >
           {theme === "dark" ? (
@@ -336,7 +334,7 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
 
   return (
     <>
-      <DesktopNavbar /> {/* TIDAK DIUBAH */}
+      <DesktopNavbar theme={theme} toggleThemeMode={toggleThemeMode} /> {/* TIDAK DIUBAH */}
       <MobileHeader />  {/* Diubah menjadi floating */}
       <MobileSidebar /> {/* Diubah menjadi floating */}
       
