@@ -48,7 +48,7 @@ const Footer = () => {
       });
       observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
       return () => observer.disconnect();
-    } catch {}
+    } catch {''};
   }, []);
 
   useEffect(() => {
@@ -228,26 +228,7 @@ const Footer = () => {
       <footer id="contact" ref={footerRef} className="relative min-h-screen overflow-hidden py-20 px-4 sm:px-6 md:px-8 lg:px-12" style={{ fontFamily: "Sora Variable" }}>
         <div ref={lineRef} className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r ${isLight ? 'from-transparent via-black/20 to-transparent' : 'from-transparent via-white/30 to-transparent'}`} />
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-12 lg:gap-8 pt-12 sm:pt-16 md:pt-20 max-w-7xl mx-auto relative z-20">
-          
-          <div ref={logoSectionRef} className="flex flex-col items-center lg:items-start order-1 lg:order-1 group relative">
-            <div className={`relative p-6 rounded-xl backdrop-blur-sm border transition-all duration-300 ${isLight ? 'bg-white/80 border-amber-100 group-hover:border-amber-200 shadow-[0_12px_35px_rgba(0,0,0,0.08)]' : 'bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-white/10 group-hover:border-white/30'}`}>
-              <div className="relative inline-block group/img">
-                <div className="relative overflow-hidden rounded-lg bg-black/20">
-                  <img src="/img/meow.jpg" loading="lazy" className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 rounded-lg transition-all duration-300 group-hover/img:scale-105 filter group-hover/img:brightness-110 z-10 object-cover block" alt="Logo" style={{ margin: 0, padding: 0 }} />
-                </div>
-              </div>
-              <h3 className={`font-bold text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-5 bg-clip-text text-transparent transition-all duration-300`}
-                  style={{
-                    backgroundImage: isLight ? 'linear-gradient(135deg, #1f2937 0%, #334155 50%, #b45309 100%)' : 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #fef3c7 100%)',
-                    backgroundClip: 'text', WebkitBackgroundClip: 'text'
-                  }}>
-                <img src="/img/logo2.png" alt="Logo" className="inline-block h-14 sm:h-16 md:h-20 w-auto object-contain align-middle" style={{ maxHeight: '5rem' }} />
-              </h3>
-              <div className={`absolute -top-2 -right-2 w-4 h-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isLight ? 'bg-amber-200' : 'bg-white/30'}`}></div>
-              <div className={`absolute -bottom-2 -left-2 w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${isLight ? 'bg-amber-100' : 'bg-white/20'}`}></div>
-            </div>
-          </div>
+        <div className="items-center justify-center gap-12 lg:gap-8 pt-12 sm:pt-16 md:pt-20 max-w-7xl mx-auto relative z-20">
 
           <div ref={contactSectionRef} className="flex flex-col items-center lg:items-center order-2 lg:order-2 w-full lg:w-auto max-w-md lg:max-w-none">
             <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center">
@@ -291,7 +272,7 @@ const Footer = () => {
                 </div>
 
                 <button type="submit" disabled={formData.isSubmitting}
-                  className={`relative overflow-hidden font-bold text-sm md:text-base whitespace-nowrap px-8 sm:px-10 py-3 sm:py-4 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2 border ${isLight ? 'bg-[#ffeccc] text-slate-900 border-amber-200 hover:bg-[#ffdfa8] hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)]' : 'bg-white/10 hover:bg-white/20 border-white/20 text-white hover:shadow-lg'}`}>
+                  className={`relative overflow-hidden font-bold text-sm md:text-base whitespace-nowrap px-8 sm:px-10 py-3 sm:py-4 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-2 border ${isLight ? 'bg-[#ffeccc] text-slate-900 border-amber-200 hover:bg-[#ffdfa8] hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)]' : 'bg-white/10 hover:bg-white/20 border-white/20 text-white hover:shadow-lg cursor-pointer'}`}>
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {formData.isSubmitting ? (
                       <>
@@ -311,50 +292,15 @@ const Footer = () => {
               </form>
             </div>
           </div>
-
-          <div ref={socialSectionRef} className="flex flex-col items-center lg:items-end order-3 lg:order-3 relative">
-            <div className={`relative p-6 rounded-xl backdrop-blur-sm border transition-all duration-300 ${isLight ? 'bg-white/80 border-amber-100 hover:border-amber-200 shadow-[0_12px_35px_rgba(0,0,0,0.08)]' : 'bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-white/10 hover:border-white/30'}`}>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 text-center lg:text-right bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: isLight ? 'linear-gradient(135deg, #1f2937 0%, #334155 50%, #b45309 100%)' : 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #fef3c7 100%)',
-                    backgroundClip: 'text', WebkitBackgroundClip: 'text'
-                  }}>Social</h2>
-              <div className="flex justify-center gap-5 sm:gap-6 md:gap-8 items-center flex-wrap">
-                {[
-                  { href: "https://www.instagram.com/rafaa_ndl?igsh=MXVuenhyaHgzeGhjMw==", src: "/img/instagram.png", alt: "Instagram" },
-                  { href: "https://www.youtube.com/@iniakuraditt", src: "/img/youtube.png", alt: "YouTube" },
-                  { href: "https://www.linkedin.com/in/rafaditya-syahputra-789809399/", src: "/img/linkin.png", alt: "LinkedIn" },
-                ].map((social, i) => (
-                  <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="block group/social relative touch-manipulation active:scale-95" aria-label={social.alt}>
-                    <div className="absolute -inset-2 rounded-full opacity-0 group-hover/social:opacity-40 transition-opacity duration-300 blur-lg bg-white/30" />
-                    <div className="relative transform transition-all duration-300 group-hover/social:scale-105">
-                      <div className={`relative w-14 h-14 sm:w-16 sm:h-16 md:w-16 md:h-16 rounded-full overflow-hidden shadow-xl transition-colors duration-300 flex items-center justify-center ${isLight ? 'bg-white hover:bg-amber-50 border border-amber-100' : 'bg-white/90 hover:bg-white'}`}>
-                        <img src={social.src} alt={social.alt} className="w-7 h-7 sm:w-8 sm:h-8 md:w-8 md:h-8 object-contain transition-transform duration-300 group-hover/social:scale-105" loading="lazy" style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))' }} />
-                      </div>
-                    </div>
-                    <div className="hidden sm:block absolute -bottom-10 left-1/2 transform -translate-x-1/2 opacity-0 group-hover/social:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap z-30">
-                      <div className={`px-3 py-1.5 rounded-lg backdrop-blur-sm shadow-lg ${isLight ? 'bg-white' : 'bg-white/90'}`}>
-                        <p className="text-black text-xs font-semibold">{social.alt}</p>
-                      </div>
-                      <div className={`absolute -top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rotate-45 ${isLight ? 'bg-white' : 'bg-white/90'}`} />
-                    </div>
-                    <div className="sm:hidden absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-active/social:opacity-100 transition-opacity duration-200 pointer-events-none z-30">
-                      <p className="text-black text-[10px] font-semibold whitespace-nowrap bg-white/90 px-2 py-1 rounded shadow-lg">{social.alt}</p>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div className="flex relative justify-center items-center mt-20 pb-8 z-20">
+        <div className="flex relative justify-center items-center mt-30 pb-8 z-20">
           <div className={`absolute -top-10 left-1/2 w-10/12 -translate-x-1/2 h-0.5 bg-gradient-to-r ${isLight ? 'from-transparent via-black/15 to-transparent' : 'from-transparent via-white/30 to-transparent'}`} />
           <h1 className="font-bold text-sm md:text-base tracking-wide bg-clip-text text-transparent"
               style={{
                 backgroundImage: isLight ? 'linear-gradient(135deg, #1f2937 0%, #334155 50%, #b45309 100%)' : 'linear-gradient(135deg, #9ca3af 0%, #6b7280 100%)',
                 backgroundClip: 'text', WebkitBackgroundClip: 'text'
-              }}>© Ra'e All rights reserved.</h1> 
+              }}>© Muhammad Yusri All rights reserved.</h1> 
         </div>
 
         <style jsx>{`
@@ -396,21 +342,7 @@ const Footer = () => {
               transform: scale(1);
               opacity: 1;
             }
-          }
-
-          @keyframes checkPop {
-            0% { 
-              transform: scale(0);
-              opacity: 0;
-            }
-            40% { 
-              transform: scale(1.05);
-            }
-            100% { 
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
+          
 
           @keyframes drawCheck {
             0% { 

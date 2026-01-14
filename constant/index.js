@@ -227,11 +227,11 @@ const navlinks = [
     "link" : "#about"
   },
 
-  {
-    id: 3,
-    text: "Gallery",
-    link: "#gallery"
-  },
+  // {
+  //   id: 3,
+  //   text: "Gallery",
+  //   link: "#gallery"
+  // },
   {
     id: 4,
     text: " Journey",

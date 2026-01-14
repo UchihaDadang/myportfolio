@@ -198,15 +198,15 @@ const About = () => {
             <div ref={photoRef} className="flex justify-center">
               <div className="relative">
                 <div className={`
-                  relative w-80 h-80 backdrop-blur-sm rounded-xl border transition-all duration-200 overflow-hidden
+                  relative w-[300px] h-[350px] backdrop-blur-sm rounded-xl border transition-all duration-200 overflow-hidden
                   ${isLight 
                     ? 'bg-white/70 border-amber-200/50 hover:bg-white/80 hover:border-amber-300/60' 
                     : 'bg-gray-900/40 border-gray-700/30 hover:bg-gray-800/50 hover:border-purple-500/30'
                   }
                 `}>
                   <img
-                    src="/img/avatar2.png"
-                    alt="Rafaditya Syahputra"
+                    src="/img/avatar2.1.png"
+                    alt="Muhammad Yusri"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
@@ -238,16 +238,7 @@ const About = () => {
               {/* Description */}
               <div className={`space-y-4 text-base text-center ${isLight ? 'text-slate-700' : 'text-slate-300'} leading-relaxed`}>
                 <p>
-                  Hao! Saya Rafaditya Syahputra, seorang Front End Developer dengan passion dalam 
-                  menciptakan solusi digital yang inovatif dan efisien. Dengan pengalaman lebih dari
-                  2 tahun di industri teknologi, saya telah mengembangkan berbagai aplikasi web dan 
-                  mobile yang tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang 
-                  luar biasa.
-                </p>
-                <p>
-                  Sekarang Saya berusia 17 tahun dan sedang menempuh pendidikan SMK di SMKN 13 Bandung,
-                  jurusan Rekayasa Perangkat Lunak. Kelas 11. Selain itu, saya juga aktif berkontribusi
-                  pada proyek open-source dan terus memperbarui keterampilan saya dengan teknologi terbaru.
+                  Saya Muhammad Yusri, seorang Web Developer dengan fokus utama sebagai Back-End Specialist serta pengalaman dalam pengembangan Internet of Things (IoT). Saya terbiasa membangun sistem backend yang efisien, aman, dan scalable, serta mengintegrasikannya dengan perangkat IoT untuk solusi berbasis teknologi yang real-time dan fungsional. Berpengalaman sebagai freelancer, saya terbiasa bekerja secara mandiri maupun kolaboratif dalam menangani berbagai kebutuhan klien, mulai dari perancangan API, pengelolaan database, hingga implementasi sistem berbasis web dan IoT.
                 </p>
               </div>
               {/* Call to Action */}
@@ -285,16 +276,7 @@ const About = () => {
               {/* Description */}
               <div className={`space-y-4 text-base lg:text-lg ${isLight ? 'text-slate-700' : 'text-slate-300'} leading-relaxed`}>
                 <p>
-                  Hao! Saya Rafaditya Syahputra, seorang Full Stack Developer dengan passion dalam 
-                  menciptakan solusi digital yang inovatif dan efisien. Dengan pengalaman lebih dari
-                  2 tahun di industri teknologi, saya telah mengembangkan berbagai aplikasi web dan 
-                  mobile yang tidak hanya fungsional tetapi juga memberikan pengalaman pengguna yang 
-                  luar biasa.
-                </p>
-                <p>
-                  Sekarang Saya berusia 17 tahun dan sedang menempuh pendidikan SMK di SMKN 13 Bandung,
-                  jurusan Rekayasa Perangkat Lunak. Kelas 11. Selain itu, saya juga aktif berkontribusi
-                  pada proyek open-source dan terus memperbarui keterampilan saya dengan teknologi terbaru.
+                  Saya Muhammad Yusri, seorang Web Developer dengan fokus utama sebagai Back-End Specialist serta pengalaman dalam pengembangan Internet of Things (IoT). Saya terbiasa membangun sistem backend yang efisien, aman, dan scalable, serta mengintegrasikannya dengan perangkat IoT untuk solusi berbasis teknologi yang real-time dan fungsional. Berpengalaman sebagai freelancer, saya terbiasa bekerja secara mandiri maupun kolaboratif dalam menangani berbagai kebutuhan klien, mulai dari perancangan API, pengelolaan database, hingga implementasi sistem berbasis web dan IoT.
                 </p>
               </div>
               {/* Call to Action - dengan styling card seperti TechStack */}
@@ -319,15 +301,15 @@ const About = () => {
               <div className="relative">
                 {/* Main Photo Card - menggunakan style card seperti TechStack */}
                 <div className={`
-                  relative w-80 h-80 lg:w-96 lg:h-96 backdrop-blur-sm rounded-xl border transition-all duration-200 overflow-hidden
+                  relative w-80 h-80 lg:w-[300px] lg:h-[350px] backdrop-blur-sm rounded-xl border transition-all duration-200 overflow-hidden
                   ${isLight 
                     ? 'bg-white/70 border-amber-200/50 hover:bg-white/80 hover:border-amber-300/60' 
                     : 'bg-gray-900/40 border-gray-700/30 hover:bg-gray-800/50 hover:border-purple-500/30'
                   }
                 `}>
                   <img
-                    src="/img/avatar2.png"
-                    alt="Rafaditya Syahputra"
+                    src="/img/avatar2.1.png"
+                    alt="Muhammad Yusri"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
