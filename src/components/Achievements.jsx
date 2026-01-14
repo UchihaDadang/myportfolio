@@ -15,7 +15,7 @@
 
   // Components
   import CertificationCard from './assets/CertificationCard';
-  import CompetitionCard from './assets/CompetitionCard';
+  // import CompetitionCard from './assets/CompetitionCard';
 
   // Data
   import { dataCerti } from '../../constant';
@@ -177,7 +177,7 @@
             </div>
             
             {/* Competition Section */}
-            <div className="mb-16 sm:mb-20 md:mb-24">
+            {/* <div className="mb-16 sm:mb-20 md:mb-24">
               <h2 
                 ref={competitionTitleRef}
                 className={`${isLight ? 'text-slate-800' : 'text-white'} text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 flex items-center gap-3 whitespace-nowrap`}
@@ -193,7 +193,7 @@
               >
                 <CompetitionCard isLight={isLight} />
               </div>
-            </div>
+            </div> */}
             
             {/* Certification Section */}
             <div>

@@ -22,43 +22,48 @@ const Journey = () => {
 
   const timelineData = [
     {
-      year: "2008",
+      year: "2000",
       title: "Kelahiran",
       description: "Awal perjalanan hidup saya dimulai",
-      childhoodPhotos: ["/img/bocil1.jpg", "/img/bocil2.jpg", "/img/bocil3.jpg"]
     },
     {
-      year: "2014",
-      title: "TK Darul Fikri",
-      description: "Memulai pendidikan di Taman Kanak-kanak Darul Fikri",
-      logo: "/img/tk.jpg",
-    },
-    {
-      year: "2015",
-      title: "SD 090 Cibiru",
-      description: "Melanjutkan pendidikan dasar di SD 090 Cibiru",
+      year: "2006 - 2012",
+      title: "SD Negeri Tugu Upah",
+      description: "Memulai pendidikan pertama",
       logo: "/img/sd.png",
     },
     {
-      year: "2020",
-      title: "SMPN 1 Cileunyi",
-      description: "Menempuh pendidikan menengah pertama di SMPN 1 Cileunyi",
+      year: "2012 - 2015",
+      title: "SMP Negeri 2 Karang Baru",
+      description: "Menempuh pendidikan menengah pertama",
       logo: "/img/smp.png",
     },
     {
-      year: "2024 - Sekarang",
-      title: "SMKN 13 Bandung",
+      year: "2015 - 2018",
+      title: "SMK Negeri 2 Karang Baru",
       description: "Siswa kelas 11 SMKN 13 Bandung",
-      logo: "/img/logo13.png",
+      logo: "/img/smk.png",
       current: true,
       organizations: [
-        { name: "MPK" },
-        { name: "Badminton" },
-        { name: "IRMA" },
-        { name: "Sastrala" },
-        { name: "Programmer Club" },
+        { name: "OSIS" },
+        { name: "Pramuka" },
+        { name: "Sispala" },
+        { name: "Paskibra" },
       ],
     },
+        {
+      year: "2020 - 2024",
+      title: "STMIK Kaputama Binjai",
+      description: "Teknik Informatika",
+      logo: "/img/stmik.jpg",
+      current: true,
+      TimeLine: [
+        { name: "Pertukaran Mahasiswa Merdeka (PMM)" },
+        { name: "Kampus Mengajar Angkatan 4 (KM4)" },
+        { name: "Magang Mandiri KOMINFOSAN" },
+      ],
+    },
+    
   ];
 
   useEffect(() => {
@@ -88,7 +93,7 @@ const Journey = () => {
       });
       observer.observe(root, { attributes: true, attributeFilter: ["data-theme"] });
       return () => observer.disconnect();
-    } catch {}
+    } catch {""};
   }, []);
 
   return (
@@ -503,33 +508,6 @@ const Journey = () => {
                       </div>
                     </div>
 
-                    {/* Childhood Photos */}
-                    {item.childhoodPhotos && (
-                      <div className="relative mt-3 h-16 sm:h-20">
-                        {item.childhoodPhotos.map((photo, i) => (
-                          <div
-                            key={i}
-                            className="absolute"
-                            style={{
-                              left: `${i * 30}px`,
-                              top: `${i * 6}px`,
-                              transform: `rotate(${(i - 1) * 6}deg)`,
-                              zIndex: 10 + i,
-                            }}
-                          >
-                            <div className={`rounded-lg overflow-hidden shadow-lg border-2 ${isLight ? 'border-amber-200 bg-white' : 'border-white/30 bg-white/10'}`}>
-                              <img
-                                src={photo}
-                                alt={`Bocil ${i + 1}`}
-                                className="w-12 h-12 sm:w-14 sm:h-14 object-cover"
-                                loading="lazy"
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
                     {/* Organizations */}
                     {item.organizations && (
                       <div className={`mt-3 pt-3 border-t ${isLight ? 'border-gray-200' : 'border-white/10'}`}>
@@ -538,6 +516,24 @@ const Journey = () => {
                         </h4>
                         <div className="flex flex-wrap gap-1.5">
                           {item.organizations.map((org, orgIndex) => (
+                            <div
+                              key={orgIndex}
+                              className={`px-2 py-1 ${isLight ? 'bg-amber-100/50 border-amber-200 text-black' : 'bg-white/10 border-white/20 text-white'} backdrop-blur-sm border rounded text-xs font-medium`}
+                            >
+                              {org.name}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                  {item.TimeLine && (
+                      <div className={`mt-3 pt-3 border-t ${isLight ? 'border-gray-200' : 'border-white/10'}`}>
+                        <h4 className={`text-xs font-semibold ${isLight ? 'text-gray-600' : 'text-white/70'} mb-2`}>
+                          Time Line Kegiatan:
+                        </h4>
+                        <div className="flex flex-wrap gap-1.5">
+                          {item.TimeLine.map((org, orgIndex) => (
                             <div
                               key={orgIndex}
                               className={`px-2 py-1 ${isLight ? 'bg-amber-100/50 border-amber-200 text-black' : 'bg-white/10 border-white/20 text-white'} backdrop-blur-sm border rounded text-xs font-medium`}

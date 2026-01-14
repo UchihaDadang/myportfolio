@@ -237,9 +237,85 @@ const Footer = () => {
                     backgroundImage: isLight ? 'linear-gradient(135deg, #1f2937 0%, #334155 50%, #b45309 100%)' : 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #fef3c7 100%)',
                     backgroundClip: 'text', WebkitBackgroundClip: 'text'
                   }}>Contact</h2>
-              <div className={`flex gap-3 items-center justify-center p-3 rounded-lg border ${isLight ? 'bg-white/80 border-amber-100 shadow-[0_10px_25px_rgba(0,0,0,0.06)]' : 'bg-white/5 border-white/10'}`}>
-                <img src="/img/email.png" alt="Email" className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ${isLight ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.18)]' : 'filter brightness-0 invert'}`} />
-                <h3 className={`${isLight ? 'text-slate-900' : 'text-white'} text-sm sm:text-base md:text-lg font-mono`}>iniakuraditt@gmail.com</h3>
+              <div className={`flex items-center justify-center p-3`}>
+                <ul className="flex flex-wrap justify-center gap-4 w-full mt-10">
+                  {[
+                    {
+                      name: "Email",
+                      value: "Email",
+                      href: "mailto:muhammadyusri@email.com",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>
+                        </svg>
+                      )
+                    },
+                    {
+                      name: "Instagram",
+                      href: "https://instagram.com",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        </svg>
+                      )
+
+                    },
+                    {
+                      name: "Facebook",
+                      href: "https://facebook.com",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                      )
+                    },
+                    {
+                      name: "Twitter",
+                      href: "https://twitter.com",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                        </svg>
+                      )
+                    },
+                    {
+                      name: "LinkedIn",
+                      href: "https://linkedin.com",
+                      icon: (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                      )
+                    }
+                  ].map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`group flex items-center gap-3 px-6 py-3 rounded-full border backdrop-blur-sm
+                        transition-all duration-300 hover:scale-105 hover:-translate-y-1
+                        ${isLight
+                          ? 'bg-white/80 border-amber-100 text-slate-800 hover:bg-amber-50 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]'
+                          : 'bg-gray-900/70 border-white/10 text-white hover:bg-white/10 hover:shadow-[0_12px_30px_rgba(255,255,255,0.08)]'
+                        }`}
+                      >
+                        <div className={`p-2 rounded-full transition-all duration-300 group-hover:rotate-6
+                          ${isLight ? 'bg-amber-100 text-amber-600' : 'bg-white/10 text-amber-300'}`}>
+                          {item.icon ?? (
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                              <circle cx="12" cy="12" r="10" />
+                            </svg>
+                          )}
+                        </div>
+
+                        <span className="font-medium whitespace-nowrap">{item.name}</span>
+
+                        <svg
+                          className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+                          fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                            d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 
