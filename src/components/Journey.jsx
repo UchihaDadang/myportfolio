@@ -41,7 +41,7 @@ const Journey = () => {
     {
       year: "2015 - 2018",
       title: "SMK Negeri 2 Karang Baru",
-      description: "Siswa kelas 11 SMKN 13 Bandung",
+      description: "Menempuh pendidikan menengah kejuruan",
       logo: "/img/smk.png",
       current: true,
       organizations: [
