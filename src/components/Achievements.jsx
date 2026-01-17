@@ -210,6 +210,16 @@
                 ref={swiperRef}
                 className="flex justify-center items-center relative"
               >
+              
+                <button
+                  className="swiper-button-prev !left-0 sm:!left-[-20px] md:!left-[-40px]"
+                  aria-label="Previous"
+                />
+                <button
+                  className="swiper-button-next !right-0 sm:!right-[-20px] md:!right-[-40px]"
+                  aria-label="Next"
+                />
+
                 <Swiper
                   modules={[Navigation, Pagination, EffectCoverflow]}
                   effect="coverflow"
@@ -434,6 +444,36 @@
               box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
               border-color: rgba(255, 255, 255, 0.6) !important;
             }
+
+            @media (max-width: 640px) {
+              .swiper-button-next,
+              .swiper-button-prev {
+                display: none !important;
+              }
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+            - color: #fff !important;
+            + color: var(--nav-color) !important;
+            }
+
+            /* Default (dark) */
+            .swiper-button-next,
+            .swiper-button-prev {
+              --nav-color: #ffffff;
+              background: rgba(255, 255, 255, 0.12) !important;
+              border: 2px solid rgba(255, 255, 255, 0.25) !important;
+            }
+
+            /* Light mode */
+            [data-theme="light"] .swiper-button-next,
+            [data-theme="light"] .swiper-button-prev {
+              --nav-color: #1f2937;
+              background: rgba(0, 0, 0, 0.08) !important;
+              border: 2px solid rgba(0, 0, 0, 0.2) !important;
+            }
+
           `}</style>
         </section>
       )

@@ -129,7 +129,7 @@ const Footer = () => {
 
     try {
       const templateParams = {
-        to_email: "iniakuraditt@gmail.com",
+        to_email: "yusri5865@gmail.com",
         from_email: formData.email,
         user_message: formData.message, 
         subject: `Collaboration Request from ${formData.email}`,
@@ -243,7 +243,7 @@ const Footer = () => {
                     {
                       name: "Email",
                       value: "Email",
-                      href: "mailto:muhammadyusri@email.com",
+                      href: "mailto:yusri5865@gmail.com",
                       icon: (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>
                         </svg>
@@ -251,7 +251,7 @@ const Footer = () => {
                     },
                     {
                       name: "Instagram",
-                      href: "https://instagram.com",
+                      href: "https://www.instagram.com/yusri2259?igsh=MTE5M2Q5bHdhYzB2eQ==",
                       icon: (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                         </svg>
@@ -260,7 +260,7 @@ const Footer = () => {
                     },
                     {
                       name: "Facebook",
-                      href: "https://facebook.com",
+                      href: "https://www.facebook.com/share/1ASs34vGx2/",
                       icon: (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook-icon lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                         </svg>
@@ -276,7 +276,7 @@ const Footer = () => {
                     },
                     {
                       name: "LinkedIn",
-                      href: "https://linkedin.com",
+                      href: "www.linkedin.com/in/muhammad-yusri-b19920269",
                       icon: (
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
                         </svg>

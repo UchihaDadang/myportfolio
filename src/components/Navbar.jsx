@@ -132,9 +132,9 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
         {/* LOGO */}
         <a href="#home" className="flex items-center">
           <img
-            src="/img/logo2.png"
+            src="/img/Y.png"
             alt="Logo"
-            className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-105"
+            className="h-12 w-12 object-contain rounded-full transition-transform duration-300 hover:scale-105"
           />
         </a>
 
