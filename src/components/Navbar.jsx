@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { navlinks } from '../../constant'
+import img from '/img/Y.png'
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -132,7 +133,7 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
         {/* LOGO */}
         <a href="#home" className="flex items-center">
           <img
-            src="/img/Y.png"
+            src={img}
             alt="Logo"
             className="h-12 w-12 object-contain rounded-full transition-transform duration-300 hover:scale-105"
           />
@@ -223,9 +224,9 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
       <div className="relative z-10 flex items-center">
         <a href="#home" aria-label="Home" tabIndex={0} className="flex items-center">
           <img
-            src="/img/logo2.png"
+            src={img}
             alt="Logo"
-              className="h-14 w-14 object-contain drop-shadow-lg"
+              className="h-14 w-14 object-contain drop-shadow-lg rounded-full"
               style={{ maxHeight: '3.5rem', filter: 'drop-shadow(0 2px 14px rgba(0,0,0,0.20))' }}
           />
         </a>
@@ -337,9 +338,6 @@ const DesktopNavbar = ({ theme = "dark", toggleThemeMode }) => {
       <DesktopNavbar theme={theme} toggleThemeMode={toggleThemeMode} /> {/* TIDAK DIUBAH */}
       <MobileHeader />  {/* Diubah menjadi floating */}
       <MobileSidebar /> {/* Diubah menjadi floating */}
-      
-      {/* Spacer untuk mobile header agar konten tidak tertutup; invisible so it doesn't look like a second navbar */}
-      <div className="md:hidden h-20 invisible" />
     </>
   )
 }

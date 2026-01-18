@@ -15,10 +15,8 @@
 
   // Components
   import CertificationCard from './assets/CertificationCard';
-  // import CompetitionCard from './assets/CompetitionCard';
 
-  // Data
-  import { dataCerti } from '../../constant';
+  import { dataCerti} from "../../constant";
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -176,26 +174,6 @@
               </h1>
             </div>
             
-            {/* Competition Section */}
-            {/* <div className="mb-16 sm:mb-20 md:mb-24">
-              <h2 
-                ref={competitionTitleRef}
-                className={`${isLight ? 'text-slate-800' : 'text-white'} text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 md:mb-10 flex items-center gap-3 whitespace-nowrap`}
-              >
-                <span className={`w-2 h-8 rounded-full animate-pulse flex-shrink-0 ${isLight ? 'bg-black/20' : 'bg-white/30'}`} />
-                Competition
-                <div className={`flex-1 h-px bg-gradient-to-r flex-shrink-0 ${isLight ? 'from-black/20 to-transparent' : 'from-white/30 to-transparent'}`} />
-              </h2>
-              
-              <div 
-                ref={competitionCardRef}
-                className='flex justify-center items-center'
-              >
-                <CompetitionCard isLight={isLight} />
-              </div>
-            </div> */}
-            
-            {/* Certification Section */}
             <div>
               <h2 
                 ref={certificationTitleRef}

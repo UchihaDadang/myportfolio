@@ -142,7 +142,7 @@ const techstack = [
 const projectsData = [
   {
     id: 1,
-    gambar: "/project/1.png",
+    gambar: "/img/project/1.png",
     judul: "WeeBoo",
     parag: "WeeBoo is an anime list website created to showcase favorite anime lists.",
     tech: ["React.JS","JavaScript","Node.JS", "MySQL", "Tailwind CSS"],
@@ -153,7 +153,7 @@ const projectsData = [
 
   {
     id: 2,
-    gambar: "/project/2.png",
+    gambar: "/img/project/2.png",
     judul: "Mini E-Comerce Dashboard",
     parag: "Mini E-Commerce Dashboard is a simple sales dashboard website created to practice skills and learn new technologies.",
     tech: ["Next.JS", "MySQL", "Tailwind CSS", "Prisma", "Node.JS","JavaScript"],
@@ -164,7 +164,7 @@ const projectsData = [
 
   {
     id: 3,
-    gambar: "/project/3.png",
+    gambar: "/img/project/3.png",
     judul: "Website IoT for Running Text",
     parag: "The IoT Website for Running Text is a student project created to control text on running displays in real time.",
     tech: ["React.JS", "Tailwind", "MySQL", "Javascript", "Node.JS", "JavaScript"],
@@ -175,7 +175,7 @@ const projectsData = [
 
   {
     id: 4,
-    gambar: "/project/4.png",
+    gambar: "/img/project/4.png",
     judul: "Helpdesk Ticketting",
     parag: "Helpdesk ticketing is a website created for students' final projects that is used for reporting processes at the police department.",
     tech: ["React", "Node.js", "MySQL", "Bootstrap", "JavaScript"],
@@ -185,7 +185,7 @@ const projectsData = [
 
   {
     id: 5,
-    gambar: "/project/5.jpg",
+    gambar: "/img/project/5.jpg",
     judul: "Mobile Website for IoT",
     parag: "The Mobile Website for IoT is a website for controlling IoT in real time with more complete features in a mobile-friendly interface.",
     tech: ["React.JS", "MySQL", "Bootstrap 5", "Node.JS", "JavaScript"],
@@ -196,7 +196,7 @@ const projectsData = [
   
   {
     id: 6,
-    gambar: "/project/6.png",
+    gambar: "/img/project/6.png",
     judul: "Notes Website",
     parag: "The Notes website is a website used as a notebook created to improve and test programming skills.",
     tech: ["Bootstrap 5", "JavaScript"],
@@ -209,70 +209,70 @@ const projectsData = [
 const dataCerti = [
   {
     id: 1,
-    gambar: "/serti/js.png",
+    gambar: "/img/serti/js.png",
     judul : "participated learning JavaScript at the Dicoding Academy",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 2,
-    gambar: "/serti/be.png",
+    gambar: "/img/serti/be.png",
     judul : "participate learning back-end at Dicoding Academy bootcamp",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 3,
-    gambar: "/serti/amazon.png",
+    gambar: "/img/serti/amazon.png",
     judul : "participated learning cloud computing from Amazon at the Dicoding Academy bootcamp",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 4,
-    gambar: "/serti/mp.png",
+    gambar: "/img/serti/mp.png",
     judul : "participate project management at Dicoding Academy",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 5,
-    gambar: "/serti/js2.png",
+    gambar: "/img/serti/js2.png",
     judul : "participate in the online class learning Javascript at the Codepolitan",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
     {
     id: 6,
-    gambar: "/serti/html.png",
+    gambar: "/img/serti/html.png",
     judul : "participate in the online HTML learning class at the Codepolitan",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
   
    {
     id: 7,
-    gambar: "/serti/css.png",
+    gambar: "/img/serti/css.png",
     judul : "participated in the online CSS class at the CodePolitan",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 8,
-    gambar: "/serti/bootstrape.png",
+    gambar: "/img/serti/bootstrape.png",
     judul : "participate in the online class learning Bootstrap at the Codepolitan",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 9,
-    gambar: "/serti/alibaba.png",
+    gambar: "/img/serti/alibaba.png",
     judul : "participated cloud computing class organized by Alibaba at the Codepolitan",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },
 
   {
     id: 10,
-    gambar: "/serti/km.png",
+    gambar: "/img/serti/km.png",
     judul : "Teaching Campus batch 4 organized by Kampus Merdeka KEMENDIKBUD",
     link: "https://drive.google.com/drive/folders/1-eXnit4NWoMiGQuDKl_3GiwntXZhyVub?usp=sharing"
   },

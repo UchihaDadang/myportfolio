@@ -57,7 +57,7 @@
 }
 
 .masked-img {
-  mask-image: url("/img/Monogram_RS.png");
+  mask-image: url("/public/img/Monogram_RS.png");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 50%;

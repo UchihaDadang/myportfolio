@@ -228,7 +228,7 @@ const Footer = () => {
       <footer id="contact" ref={footerRef} className="relative min-h-screen overflow-hidden py-20 px-4 sm:px-6 md:px-8 lg:px-12" style={{ fontFamily: "Sora Variable" }}>
         <div ref={lineRef} className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-4/5 h-0.5 bg-gradient-to-r ${isLight ? 'from-transparent via-black/20 to-transparent' : 'from-transparent via-white/30 to-transparent'}`} />
 
-        <div className="items-center justify-center gap-12 lg:gap-8 pt-12 sm:pt-16 md:pt-20 max-w-7xl mx-auto relative z-20">
+        <div className="flex flex-col items-center justify-center gap-12 lg:gap-8 pt-12 sm:pt-16 md:pt-20 max-w-7xl mx-auto relative z-20">
 
           <div ref={contactSectionRef} className="flex flex-col items-center lg:items-center order-2 lg:order-2 w-full lg:w-auto max-w-md lg:max-w-none">
             <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20 text-center">
@@ -238,7 +238,10 @@ const Footer = () => {
                     backgroundClip: 'text', WebkitBackgroundClip: 'text'
                   }}>Contact</h2>
               <div className={`flex items-center justify-center p-3`}>
-                <ul className="flex flex-wrap justify-center gap-4 w-full mt-10">
+                <ul className="
+                    grid grid-cols-2 gap-4 w-full mt-10 place-items-center
+                    lg:flex lg:flex-wrap lg:justify-center
+                  ">
                   {[
                     {
                       name: "Email",
@@ -267,14 +270,6 @@ const Footer = () => {
                       )
                     },
                     {
-                      name: "Twitter",
-                      href: "https://twitter.com",
-                      icon: (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter-icon lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-                        </svg>
-                      )
-                    },
-                    {
                       name: "LinkedIn",
                       href: "www.linkedin.com/in/muhammad-yusri-b19920269",
                       icon: (
@@ -288,7 +283,11 @@ const Footer = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`group flex items-center gap-3 px-6 py-3 rounded-full border backdrop-blur-sm
+                        className={`group
+                        flex items-center justify-center
+                        lg:justify-start lg:gap-3
+                        px-5 py-4 lg:px-6 lg:py-3
+                        rounded-full border backdrop-blur-sm
                         transition-all duration-300 hover:scale-105 hover:-translate-y-1
                         ${isLight
                           ? 'bg-white/80 border-amber-100 text-slate-800 hover:bg-amber-50 hover:shadow-[0_12px_30px_rgba(0,0,0,0.08)]'
@@ -304,10 +303,10 @@ const Footer = () => {
                           )}
                         </div>
 
-                        <span className="font-medium whitespace-nowrap">{item.name}</span>
+                        <span className="hidden lg:inline font-medium whitespace-nowrap">{item.name}</span>
 
                         <svg
-                          className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
+                          className="hidden lg:block w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"
                           fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                             d="M9 5l7 7-7 7" />

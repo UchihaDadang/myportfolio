@@ -24,7 +24,7 @@ const ProjectCard = ({ gambar, judul, parag, tech, linkDemo, linkCode, isComingS
       {/* Image */}
       <div className="relative h-40 sm:h-48 md:h-52 overflow-hidden">
         <img 
-          src={`/img/${gambar}`} 
+          src={`${gambar}`} 
           alt={judul}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           width="400" height="256"
@@ -327,10 +327,11 @@ const Projects = () => {
         {/* Projects Container */}
         <div className="relative">
           {/* Navigation Buttons */}
+          {/* Navigation Buttons - Hanya tampil di md ke atas */}
           <button
             onClick={() => scrollTo('left')}
             disabled={!canScrollLeft}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 sm:-translate-x-10 lg:-translate-x-16 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-xl border flex items-center justify-center transition-all duration-300 hover:scale-110 ${
+            className={`hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-10 lg:-translate-x-16 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-xl border items-center justify-center transition-all duration-300 hover:scale-110 ${
               isLight
                 ? "bg-black/5 border-black/20 hover:border-black/30 hover:bg-black/10"
                 : "bg-white/10 border-white/30 hover:border-white/50 hover:bg-white/15"
@@ -346,7 +347,7 @@ const Projects = () => {
           <button
             onClick={() => scrollTo('right')}
             disabled={!canScrollRight}
-            className={`absolute right-0 top-1/2 -translate-y-1/2 sm:translate-x-10 lg:translate-x-16 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-xl border flex items-center justify-center transition-all duration-300 hover:scale-110 ${
+            className={`hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-10 lg:translate-x-16 z-30 w-10 h-10 sm:w-12 sm:h-12 rounded-full backdrop-blur-xl border items-center justify-center transition-all duration-300 hover:scale-110 ${
               isLight
                 ? "bg-black/5 border-black/20 hover:border-black/30 hover:bg-black/10"
                 : "bg-white/10 border-white/30 hover:border-white/50 hover:bg-white/15"

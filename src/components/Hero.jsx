@@ -340,7 +340,7 @@ const Hero = () => {
           </div>
 
           {/* ================= RIGHT CONTENT (IMAGE) ================= */}
-          <div className="hidden md:block justify-center items-center lg:justify-end w-full h-[420px] lg:h-[520px]">
+          <div className="hidden lg:block justify-center items-center lg:justify-end w-full h-[420px] lg:h-[520px]">
               <DotLottieReact
                 data={animasiData}
                 loop
